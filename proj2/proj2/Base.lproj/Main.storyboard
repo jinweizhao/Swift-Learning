@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8xK-9v-gbQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="3FM-ba-wfI">
+            <objects>
+                <navigationController id="8xK-9v-gbQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Kna-Oz-vxK">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ji5-UV-sOM" kind="relationship" relationship="rootViewController" id="MMV-LW-6fy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zRf-8f-5nZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-886" y="158"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lGb-2P-qC7">
+            <objects>
+                <viewController id="Ji5-UV-sOM" customClass="ViewController" customModule="proj2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nJc-sl-O7s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyj-df-CW3">
+                                <rect key="frame" x="175.5" y="259.5" width="25" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adp-T1-NgE">
+                                <rect key="frame" x="138.5" y="582" width="98" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Tap or Hold"/>
+                                <connections>
+                                    <action selector="tapOrHoldClick" destination="Ji5-UV-sOM" eventType="touchUpInside" id="1BM-Oj-klv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hyj-df-CW3" firstAttribute="centerX" secondItem="nJc-sl-O7s" secondAttribute="centerX" id="AKc-cg-CCk"/>
+                            <constraint firstItem="PeG-CN-Bh8" firstAttribute="bottom" secondItem="Adp-T1-NgE" secondAttribute="bottom" constant="50" id="H9B-n5-Wpv"/>
+                            <constraint firstItem="Adp-T1-NgE" firstAttribute="centerX" secondItem="nJc-sl-O7s" secondAttribute="centerX" id="PK5-vV-rkw"/>
+                            <constraint firstItem="Hyj-df-CW3" firstAttribute="centerY" secondItem="nJc-sl-O7s" secondAttribute="centerY" constant="-50" id="YY3-qr-Ppn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PeG-CN-Bh8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Y1c-yX-3oe">
+                        <barButtonItem key="leftBarButtonItem" title="reset" id="ngf-8b-GWG">
+                            <connections>
+                                <action selector="clearClick:" destination="Ji5-UV-sOM" id="bRR-r1-4kd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="countLabel" destination="Hyj-df-CW3" id="hJ0-sC-esm"/>
+                        <outlet property="tapBtn" destination="Adp-T1-NgE" id="W3n-zM-W4n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K8U-95-5am" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-158" y="7"/>
+        </scene>
+    </scenes>
+</document>
